@@ -1,0 +1,115 @@
+.left_block {
+    display: table-cell;
+    float: left;
+    width: 30%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.right_block{
+    display: table-cell;
+    float: left;
+    width: 70%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.line {
+    height: 45px;
+    margin: 20px 0;
+    line-height: 45px;
+}
+.cond_index{
+    font-size: 16px;
+    width: auto;
+}
+.cond_select {
+    display: block;
+    width: 100%;
+}
+// ------------------------------------
+.button-delete {
+    position: absolute;
+    right: 0;
+    border: 2px solid #ffa9a9;
+    color: #ff2a2a;
+   
+}
+.button-delete:hover {
+    border: 2px solid #ff7575;
+}
+.button-delete:active {
+    color: #ab1f1f;
+    border: 2px solid #ab1f1f;
+    background: rgb(253, 253, 253);
+}
+.button-add {
+    position: absolute;
+    left: 0;
+    border: 2px solid #dbf28b;
+    color: #81a500;
+}
+.button-add:hover {
+    border: 2px solid #c1eb2a;
+}
+.button-add:active {
+    float: left;
+    border: 2px solid #dbf28b;
+    color: #81a500;
+}
+// ------------------------------------
+%container-condition {
+    position: relative;
+    display: table;
+    padding: 10px 0;
+    border-bottom: 2px solid #f3f3f3;
+}
+.and_block {
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+.or_block {
+    content: 'ИЛИ';
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    background: cyan;
+    line-height: 16px;
+}
+
+
+.container-condition_gray {
+    @extend %container-condition;
+    background: rgb(198, 198, 198);
+    border-bottom: none;
+}
+.container-condition_gray .and_block {display: none;}
+.container-condition_gray .cond_index {color: #000;}
+
+.container-condition_beige {
+    @extend %container-condition;
+    background: #fffcf5;
+}
+.container-condition_beige .and_block, .container-condition_beige .or_block {background: #f7f1e3;}
+.container-condition_beige .cond_index {color: #a57404;}
+
+
+.container-condition_blue {
+    @extend %container-condition;
+    background: #f8faff;
+}
+.container-condition_blue .and_block, .container-condition_blue .or_block {background: #e5f0fa;}
+.container-condition_blue .cond_index {color: #385ab0;}
+
+.container-condition_green {
+    @extend %container-condition;
+    background: #fafff8;
+}
+.container-condition_green .and_block,
+.container-condition_green .or_block 
+{background: #e7f6db;}
+.container-condition_green .cond_index {color: #94bf5d;}
